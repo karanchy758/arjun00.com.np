@@ -1,0 +1,162 @@
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+       
+        :root {
+            --primary-color: #041C3C;   
+            --accent-color: #F7E80F;    
+            --background-color: #F4F6F9; 
+            --card-background: #ffffff;
+            --text-color: #212529;     
+            --light-text-color: #ffffff;
+            --black-text-color: #000000; 
+            --border-color: #e9ecef;
+            --disabled-color: #6c757d;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+     
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header-image-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 2em;
+            box-shadow: var(--shadow);
+        }
+
+        .header-image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        h2.section-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 1em;
+        }
+        
+
+        .accordion-item {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .accordion-item[open] {
+             box-shadow: 0 8px 25px rgba(4, 28, 60, 0.1);
+        }
+        
+        .accordion-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 18px 25px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-summary:hover {
+            filter: brightness(120%);
+        }
+        
+        .accordion-summary::after {
+            content: '+';
+            font-size: 1.8em;
+            font-weight: 400;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item[open] > .accordion-summary::after {
+            transform: rotate(45deg);
+        }
+        
+        .accordion-content {
+            padding: 15px 25px 25px 25px;
+            border-top: 1px solid var(--border-color);
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .resource-category h4 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .resource-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            background-color: var(--accent-color);
+            color: var(--black-text-color) !important; 
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.2s ease-in-out;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .btn:hover {
+            filter: brightness(95%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn.not-available {
+            background-color: var(--disabled-color);
+            cursor: not-allowed;
+            color: #f1f3f5 !important;
+        }
+        
+        .btn.not-available:hover {
+            filter: none;
+            transform: none;
+            box-shadow: none;
+        }
+
+    </style>
